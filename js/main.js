@@ -15,21 +15,14 @@ function initialize() {
     });
 
     var boxText = document.createElement("div");
-    boxText.style.cssText = "border: 1px solid blakc; margin-top: 5px; background: tomato; padding: 5px";
     boxText.innerHTML = "<p>This is a test...</p>";
 
     var customOptions = {
         content: boxText,
-        disableAutoPan: false,
         maxWidth: 0,
-        pixelOffset: new google.maps.Size(-140, 0),
+        pixelOffset: new google.maps.Size(30, -50),
         zIndex: null,
-        boxStyle: {
-            background: "red",
-            opacity: 0.75,
-            width: "280px"
-        },
-        infoBoxClearance: new google.maps.Size(1, 1),
+        boxClass: "foo",
         isHidden: false,
         pane: "floatPane",
         enableEventPropagation: false
