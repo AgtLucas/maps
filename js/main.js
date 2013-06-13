@@ -1,12 +1,14 @@
-(function() {
-'use strict';
-function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("maps"),
-            mapOptions);
-    }
-})();
+$(document).ready(function () {
+  console.log('document ready');
+  function initializeMap() {
+    console.log('initialize');
+    var myOptions = {
+      center: new google.maps.LatLng(-34.397, 150.644),
+      zoom: 8,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("maps"),
+        myOptions);
+  }
+  initializeMap();
+});
