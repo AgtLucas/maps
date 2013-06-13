@@ -24,7 +24,8 @@ function initialize() {
         zIndex: null,
         boxClass: "foo",
         isHidden: false,
-        closeBoxUrl: "",
+        closeBoxMargin: "10px 2px 2px 2px",
+        closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif",
         pane: "floatPane",
         enableEventPropagation: false
     };
