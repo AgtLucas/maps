@@ -15,7 +15,7 @@ function initialize() {
     });
 
     var boxText = document.createElement("div");
-    boxText.innerHTML = "<p>This is a test...</p>";
+    boxText.innerHTML = "<p class='wt'>This is a test...</p>";
 
     var customOptions = {
         content: boxText,
@@ -24,15 +24,21 @@ function initialize() {
         zIndex: null,
         boxClass: "foo",
         isHidden: false,
+        closeBoxUrl: "",
         pane: "floatPane",
         enableEventPropagation: false
     };
 
-    google.maps.event.addListener(marker, "click", function() {
-        ib.open(map, this)
-    });
+    // google.maps.event.addListener(marker, "click", function() {
+    //     ib.open(map, this)
+    // });
 
     var ib = new InfoBox(customOptions);
+    ib.open(map, marker);
 };
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+$('.foo').hover(function() {
+    $(this).hide();
+});
